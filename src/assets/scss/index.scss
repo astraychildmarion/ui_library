@@ -1,0 +1,15 @@
+@import 'color';
+@import 'font';
+
+@font-face {
+  @include font-face-generator('/fonts/roboto-v27-latin-regular', 400);
+}
+@font-face {
+  @include font-face-generator('/fonts/roboto-v27-latin-500', 500);
+}
+@font-face {
+  @include font-face-generator('/fonts/roboto-v27-latin-700', 700);
+}
+@font-face {
+  @include font-face-generator('/fonts/roboto-v27-latin-900', 900);
+}

@@ -1,0 +1,7 @@
+@mixin font-face-generator($fontUrl, $fontWeight) {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: $fontWeight;
+  src: local(''), url($fontUrl + '.woff2') format('woff2'), url($fontUrl + '.woff') format('woff');
+  font-display: fallback;
+}
