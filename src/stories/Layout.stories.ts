@@ -57,10 +57,6 @@ const meta =  {
       control: 'boolean',
       description: 'Authority/Permission to show the Manage section.',
     },
-    logoUrl: {
-      control: 'text',
-      description: 'A logo link',
-    },
     logoLink: {
       control: 'text',
       description: 'A href for logo.',
@@ -194,7 +190,7 @@ export const Layout: Story = {
 
       <template #content>
         <div style="padding: 100px;height: 100vh">
-          <h1>hello world</h1>
+          <h1>Hello World</h1>
           <p>Welcome to UI Libraby</p>
         </div>
       </template>

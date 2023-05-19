@@ -35,7 +35,7 @@ const meta = {
         'Event name is `clickMenu`. Action triggered by clicking menu items. You can update `selectKey` by this function',
     },
   },
-  args: {
+    args: {
     selectedKeys: ['1'],
     siderData: [
       {

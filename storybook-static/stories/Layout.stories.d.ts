@@ -34,11 +34,6 @@ declare const meta: {
             type: StringConstructor;
             default: string;
         };
-        logoUrl: {
-            type: StringConstructor;
-            default: string;
-            required: true;
-        };
         logoLink: {
             type: StringConstructor;
             default: string;
@@ -128,11 +123,6 @@ declare const meta: {
             type: StringConstructor;
             default: string;
         };
-        logoUrl: {
-            type: StringConstructor;
-            default: string;
-            required: true;
-        };
         logoLink: {
             type: StringConstructor;
             default: string;
@@ -176,7 +166,6 @@ declare const meta: {
         selectedKeys: import("ant-design-vue/lib/_util/type").Key[];
         selectAppListDrawerKey: import("ant-design-vue/lib/_util/type").Key[];
         ver: string;
-        logoUrl: string;
         logoLink: string;
         manageMenu: import("../components/interface").HeaderUserMenu[];
         userMenu: import("../components/interface").HeaderUserMenu[];
@@ -215,10 +204,6 @@ declare const meta: {
             description: string;
         };
         manageAuth: {
-            control: string;
-            description: string;
-        };
-        logoUrl: {
             control: string;
             description: string;
         };

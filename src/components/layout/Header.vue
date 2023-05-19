@@ -6,7 +6,7 @@
     <div class="header__container">
       <div class="header__logo">
         <a :href="logoLink">
-          <img :src="logoUrl" alt="Logo" data-e2e="header-icon" />
+          UI Library
         </a>
       </div>
       <div class="header__user">
@@ -184,6 +184,9 @@ a:hover {
     justify-content: center;
     align-content: center;
     height: 100%;
+    :hover {
+      background-color: $header-hover-bg;
+    }
   }
   &__container {
     display: grid;
@@ -191,8 +194,12 @@ a:hover {
     padding-left: 32px;
   }
   &__logo {
-    height: 72px;
-    line-height: 72px;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    padding-top: 14px;
+    line-height: 20px;
+    animation: Color 4s linear infinite;
   }
   &__user {
     justify-self: flex-end;
@@ -275,4 +282,30 @@ a:hover {
 .header .ant-badge-count {
   box-shadow: none;
 }
+@keyframes Color{
+  0%{
+    color:#3EF536;
+  }
+  
+  20%{
+    color:#674EF5;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#F55BB1;
+  }
+}
+
 </style>

@@ -11,10 +11,6 @@ const meta = {
       control: 'boolean',
       description: 'Authority/Permission to show the Manage section.',
     },
-    logoUrl: {
-      control: 'text',
-      description: 'A logo link',
-    },
     logoLink: {
       control: 'text',
       description: 'A href for logo.',
@@ -61,7 +57,6 @@ const meta = {
   },
   args: {
     manageAuth: true,
-    logoUrl: '/logo.png',
     manageMenu: [
       { name: 'Upgrade', url: '#', icon: 'smile' },
       { name: 'Billing', url: '#', icon: 'smile' },

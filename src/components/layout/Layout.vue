@@ -28,7 +28,6 @@
         <Header
           :bell-count="bellCount"
           :manage-auth="manageAuth"
-          :logo-url="logoUrl"
           height="72"
           :manage-menu="manageMenu"
           :logo-link="logoLink"
@@ -179,11 +178,6 @@ export default defineComponent({
       default: '1.0.0',
     },
     // header
-    logoUrl: {
-      type: String,
-      default: '',
-      required: true,
-    },
     logoLink: {
       type: String,
       default: '',
