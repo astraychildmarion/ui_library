@@ -34,11 +34,6 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
         type: StringConstructor;
         default: string;
     };
-    logoUrl: {
-        type: StringConstructor;
-        default: string;
-        required: true;
-    };
     logoLink: {
         type: StringConstructor;
         default: string;
@@ -128,11 +123,6 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
         type: StringConstructor;
         default: string;
     };
-    logoUrl: {
-        type: StringConstructor;
-        default: string;
-        required: true;
-    };
     logoLink: {
         type: StringConstructor;
         default: string;
@@ -176,7 +166,6 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
     selectedKeys: Key[];
     selectAppListDrawerKey: Key[];
     ver: string;
-    logoUrl: string;
     logoLink: string;
     manageMenu: HeaderUserMenu[];
     userMenu: HeaderUserMenu[];

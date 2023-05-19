@@ -93,10 +93,6 @@ declare const meta: {
             control: string;
             description: string;
         };
-        logoUrl: {
-            control: string;
-            description: string;
-        };
         logoLink: {
             control: string;
             description: string;
@@ -143,7 +139,6 @@ declare const meta: {
     };
     args: {
         manageAuth: boolean;
-        logoUrl: string;
         manageMenu: {
             name: string;
             url: string;
