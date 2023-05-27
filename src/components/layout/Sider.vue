@@ -13,11 +13,7 @@
       </Menu>
     </div>
     <div class="sider__menu-wrapper__second">
-      <Menu
-        mode="inline"
-        :selected-keys="selectedKeys"
-        @click="$emit('clickMenu', $event)"
-      >
+      <Menu mode="inline" :selected-keys="selectedKeys" @click="$emit('clickMenu', $event)">
         <template v-for="item in restData">
           <MenuItem v-if="item.path" :key="item.key" data-e2e="sider-item">
             <template #icon>
@@ -77,12 +73,16 @@ export default defineComponent({
   &__wrapper {
     max-width: 256px;
     transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+    background-color: $sider-bg-light;
     :deep(.ant-menu) {
       &.ant-menu-inline-collapsed {
         width: 72px;
         > .ant-menu-item {
           padding: 0 24px !important;
         }
+      }
+      &.ant-menu-inline .ant-menu-item::after {
+        border-right: none;
       }
       .sider__item {
         display: flex;
@@ -93,15 +93,18 @@ export default defineComponent({
         line-height: 56px;
         margin-top: 0px;
         margin-bottom: 0px;
+        border-radius: 16px;
         &-divider {
           background-color: $divider-bg-color;
           margin: 1px 16px;
         }
       }
       &.ant-menu {
-        /* background-color: $sider-bg-light; */
+        background-color: $sider-bg-light;
         .ant-menu-item:hover {
-          background-color: $sider-item-active-light;
+          background-color: $sider-bg-light;
+          color: $sider-item-text-light;
+          font-weight: bold;
         }
         .ant-menu-item {
           color: $sider-item-text-light;
@@ -110,22 +113,33 @@ export default defineComponent({
           }
           &-selected {
             background-color: $sider-item-selected-light;
-
-            &::after {
-              border-right: 4px solid $sider-item-selected-border-light;
-              transform: scaleY(1);
-              opacity: 1;
+            color: $sider-item-active-text;
+            border-radius: 16px;
+            &:hover {
+              background-color: $sider-item-selected-light;
+              color: $sider-item-active-text;
+              border-radius: 16px;
+            }
+            .anticon {
+              margin: 5px;
+              color: $sider-item-active-text;
             }
           }
           &-active {
             background-color: $sider-item-active-light;
+            color: $sider-item-active-text;
+            border-radius: 16px;
+            .anticon {
+              margin: 5px;
+              color: $sider-item-active-text;
+            }
           }
           .anticon {
             margin: 5px;
             color: $sider-item-icon-light;
           }
         }
-      } 
+      }
     }
     ::-webkit-scrollbar {
       width: 5px;
@@ -147,14 +161,6 @@ export default defineComponent({
   &__menu-wrapper {
     &__first {
       padding-top: 16px;
-      :deep(.ant-menu.ant-menu-dark) .ant-menu-item-selected {
-        /* background-color: $sider-bg-dark; */
-        &::after {
-          border-right: 0px solid $sider-item-selected-border;
-          transform: scaleY(0);
-          opacity: 0;
-        }
-      }
     }
     &__second {
       overflow: hidden overlay;

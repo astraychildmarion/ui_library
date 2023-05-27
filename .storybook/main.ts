@@ -34,8 +34,12 @@ const config: StorybookConfig = {
             `,
           },
           less: {
+            // 改 ant design 主題色
+            modifyVars: {
+              'primary-color': '#3B36DB',
+              'font-family': 'Roboto',
+            },
             javascriptEnabled: true,
-            // modifyVars: theme,
           },
         },
       },

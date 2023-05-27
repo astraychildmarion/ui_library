@@ -16,11 +16,11 @@
   "typings": "dist/src/components/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
+    "build": "vue-tsc --noEmit --skipLibCheck && vite build && touch ./storybook-static/.nojekyll" ,
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "storybook:publish": "npm run storybook:build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
+    "storybook:publish": "gh-pages -d ./storybook-static -t true"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",

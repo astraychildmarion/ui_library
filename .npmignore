@@ -7,9 +7,6 @@ public/
 package-lock.json
 node_modules
 vite.config.js
-yarn.lock
-.husky/
-.zeplin/
 .editorconfig
 .env
 .gitlab-ci.yml

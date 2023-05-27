@@ -1,13 +1,8 @@
 <template>
   <div class="header">
-    <div class="header__icon" data-e2e="app-launcher" @click="clickTopLeftCorner">
-      <AppstoreOutlined :style="{ color: '#ffffff', fontSize: '24px' }" />
-    </div>
     <div class="header__container">
       <div class="header__logo">
-        <a :href="logoLink">
-          UI Library
-        </a>
+        <a :href="logoLink"> UI Library </a>
       </div>
       <div class="header__user">
         <Dropdown v-if="manageAuth" @visibleChange="(visible) => (manageMenuVisible = visible)">
@@ -131,21 +126,16 @@ export default defineComponent({
       default: 0,
     },
   },
-  emits: ['clickTopLeftCorner', 'logOut', 'clickBell'],
+  emits: ['logOut', 'clickBell'],
   setup(props, { emit }) {
     const manageMenuVisible = ref(false);
     const isDrawerClose = ref(true);
-    function clickTopLeftCorner() {
-      isDrawerClose.value = !isDrawerClose.value;
-      emit('clickTopLeftCorner', isDrawerClose.value);
-    }
     function clickBellHandler() {
       emit('clickBell');
     }
     return {
       manageMenuVisible,
       isDrawerClose,
-      clickTopLeftCorner,
       clickBellHandler,
     };
   },
@@ -157,7 +147,7 @@ export default defineComponent({
         width: '12px',
       },
       bellStyle: {
-        color: '#ffffff',
+        color: '#98B3C8',
         fontSize: '18px',
       },
     };
@@ -172,26 +162,14 @@ a:hover {
   color: inherit;
 }
 .header {
-  height: 72px;
-  display: grid;
-  grid-template-columns: 72px 1fr;
+  /* display: grid;
+  grid-template-columns: 72px 1fr; */
   background-color: $header-bg;
-
-  &__icon {
-    cursor: pointer;
-    background-color: $header-bar-icon-bg;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    :hover {
-      background-color: $header-hover-bg;
-    }
-  }
   &__container {
     display: grid;
     grid-template-columns: min-content auto;
     padding-left: 32px;
+    height: 72px;
   }
   &__logo {
     font-weight: bold;
@@ -282,30 +260,29 @@ a:hover {
 .header .ant-badge-count {
   box-shadow: none;
 }
-@keyframes Color{
-  0%{
-    color:#3EF536;
+@keyframes Color {
+  0% {
+    color: #3ef536;
   }
-  
-  20%{
-    color:#674EF5;
+
+  20% {
+    color: #674ef5;
   }
-  
-  40%{
-    color:#FFCE54;
+
+  40% {
+    color: #ffce54;
   }
-  
-  60%{
-    color:#FC6E51;
+
+  60% {
+    color: #fc6e51;
   }
-  
-  80%{
-    color:#ED5565;
+
+  80% {
+    color: #ed5565;
   }
-  
-  100%{
-    color:#F55BB1;
+
+  100% {
+    color: #f55bb1;
   }
 }
-
 </style>

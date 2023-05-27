@@ -4,6 +4,7 @@ import ChosenTag from '../components/ChosenTag.vue';
 const meta: Meta<typeof ChosenTag> = {
   title: 'UI/Chosen Tag',
   tags: ['autodocs'],
+  decorators: [() => ({ template: '<div style="margin: 2em"><story /></div>'})],
   component: ChosenTag,
     argTypes: {
       text: {

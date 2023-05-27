@@ -46,10 +46,6 @@ const meta = {
       action: 'logOut',
       description: 'Event name is `logOut`. Emit function for logout',
     },
-    onClickTopLeftCorner: {
-      action: 'clickTopLeftCorner',
-      description: 'Event name is `clickTopLeftCorner`. To control app list drawer.',
-    },
     onClickBell: {
       action: 'clickBell',
       description: 'Event name is clickBell. It would be triggered when the Bell clicked.',

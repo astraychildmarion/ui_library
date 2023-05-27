@@ -54,7 +54,7 @@ export default defineConfig({
       less: {
         // 改 ant design 主題色
         modifyVars: {
-          'primary-color': '#0488C5',
+          'primary-color': '#3B36DB',
           'font-family': 'Roboto',
         },
         javascriptEnabled: true,

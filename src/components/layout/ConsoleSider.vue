@@ -13,11 +13,7 @@
       </Menu>
     </div>
     <div class="sider__menu-wrapper__second">
-      <Menu
-        mode="inline"
-        :selected-keys="selectedKeys"
-        @click="$emit('clickMenu', $event)"
-      >
+      <Menu mode="inline" :selected-keys="selectedKeys" @click="$emit('clickMenu', $event)">
         <template v-for="item in restData">
           <MenuItem v-if="item.path" :key="item.key" data-e2e="sider-item">
             <template #icon>
@@ -112,11 +108,6 @@ export default defineComponent({
           &-selected {
             background: $sider-item-selected-light;
             color: $sider-item-text-light;
-            &::after {
-              border-right: 4px solid $sider-item-selected-border-light;
-              transform: scaleY(1);
-              opacity: 1;
-            }
           }
           &-active {
             background: $sider-item-active-light;
@@ -155,11 +146,6 @@ export default defineComponent({
       padding-top: 16px;
       :deep(.ant-menu.ant-menu-dark) .ant-menu-item-selected {
         background-color: $sider-bg-dark;
-        &::after {
-          border-right: 0px solid $sider-item-selected-border;
-          transform: scaleY(0);
-          opacity: 0;
-        }
       }
     }
     &__second {
@@ -174,8 +160,8 @@ export default defineComponent({
 </style>
 <style lang="scss">
 .ant-tooltip-inner {
- background-color: $tooltip-bg !important;
- border-radius: 4px;
+  background-color: $tooltip-bg !important;
+  border-radius: 4px;
 }
 .ant-tooltip-arrow-content {
   background-color: $tooltip-bg !important;

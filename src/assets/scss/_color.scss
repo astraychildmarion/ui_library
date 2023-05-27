@@ -1,12 +1,13 @@
-$primary-color: #3B79DB;
+$primary-color: #3b36db;
 $safe-color: #37c5a0;
-$info-color:#54B4E0;
+$info-color: #54b4e0;
 $warn-color: #ed952e;
 $danger-color: #ef476f;
-$safe-color-seconary: #B4F2E2;
-$info-color-seconary:#E2F6FF;
-$warn-color-seconary: #FFF1D1;
-$danger-color-seconary: #FAC7D3;
+$primary-color-seconary: #e0dfff;
+$safe-color-seconary: #b4f2e2;
+$info-color-seconary: #e2f6ff;
+$warn-color-seconary: #fff1d1;
+$danger-color-seconary: #fac7d3;
 $box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
 $box-radius: 5px;
 $box-border: 1px solid rgba(0, 0, 0, 0.1);
@@ -17,23 +18,25 @@ $placeholder-color: #dadcde;
 $tooltip-bg: #051322e6;
 
 // sider color start
-$sider-bg-light: #f0f0f0;
-$sider-item-text-light: #3c3c3c;
-$sider-item-icon-light: #3c3c3c;
-$sider-item-selected-light: #cccccc;
-$sider-item-active-light: #dddddd;
+$sider-bg-light: #f2f6ff;
+$sider-item-text-light: #98b3c8;
+$sider-item-icon-light: #98b3c8;
+$sider-item-selected-light: $primary-color;
+$sider-item-active-light: $primary-color;
+$sider-item-active-text: #ffffff;
 $sider-item-selected-border-light: $primary-color;
-$sider-item-selected-border:$primary-color;
+$sider-item-selected-border: $primary-color;
 $sider-bg-dark: #4f5b93;
 // sider color end
-
+$text-dark: #091427;
+$text-light: #98b3c8;
 // header variables start
-$header-text: #ffffff;
-$header-bg: #3B79DB;
-$header-bar-icon-bg: #3B79DB;
-$header-hover-bg: #497fd7;
-$header-dropdown-bg: #3B79DB;
-$header-dropdown-hover-bg: #497fd7;
+$header-text: $text-dark;
+$header-bg: #ffffff;
+$header-bar-icon-bg: $primary-color;
+$header-hover-bg: #f0f0f0;
+$header-dropdown-bg: #f0f0f0;
+$header-dropdown-hover-bg: #e9ecf2;
 $header-height: 72px;
 // header variables end
 
@@ -105,6 +108,5 @@ $chosenTag-count-color: #95a0a8;
 $chosenTag-chosen-bg: $primary-color;
 $chosenTag-chosen-border: rgba($primary-color, 20%);
 $chosenTag-chosen-input: #ffffff;
-
 
 $divider-bg-color: #969ca1;

@@ -5,35 +5,35 @@ const meta: Meta<typeof NotificationList1> = {
   title: 'UI/Notification List',
   component: NotificationList1,
   tags: ['autodocs'],
-    argTypes: {
-      isNoData: {
-        control: {type: 'boolean'},
-        description: 'demo description',
-      },
-      isShow: {
-        control: {type: 'boolean'},
-      },
-      isShowLoading: {
-        control: {type: 'boolean'},
-      },
-      dataSource: {
-        control: 'object',
-      },
-      onInfiniteScroll: {
-        action: 'infiniteScroll',
-      },
-      onClickOutside: {
-        action: 'clickOutside',
-      }
+  decorators: [() => ({ template: '<div style="margin: 2em"><story /></div>'})],
+  argTypes: {
+    isNoData: {
+      control: { type: 'boolean' },
+      description: 'demo description',
     },
-}
+    isShow: {
+      control: { type: 'boolean' },
+    },
+    isShowLoading: {
+      control: { type: 'boolean' },
+    },
+    dataSource: {
+      control: 'object',
+    },
+    onInfiniteScroll: {
+      action: 'infiniteScroll',
+    },
+    onClickOutside: {
+      action: 'clickOutside',
+    },
+  },
+};
 
 export default meta;
 type Story = StoryObj<typeof NotificationList1>;
 
-
-export const NotificationList : Story = {
-  args:{
+export const NotificationList: Story = {
+  args: {
     isShow: true,
     isShowLoading: true,
     isNoData: false,
@@ -109,5 +109,5 @@ export const NotificationList : Story = {
         read: true,
       },
     ],
-  }
+  },
 };

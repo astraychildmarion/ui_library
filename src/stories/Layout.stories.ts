@@ -14,13 +14,12 @@ import {
   SketchOutlined,
 } from '@ant-design/icons-vue';
 import AppLayout from '../components/layout/Layout.vue';
-import AppListData from './ApplistDrawer.stories';
+import AppListData from './ApplistDrawer';
 import AppSiderData from './Sider.stories';
 import AppHeaderData from './Header.stories';
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-
-const meta =  {
+const meta = {
   title: 'UI/Layout/AppLayout',
   component: AppLayout,
   argTypes: {
@@ -118,8 +117,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Layout: Story = {
-  render:(args) => ({
-    components: {    
+  render: (args) => ({
+    components: {
       AppLayout,
       ControlOutlined,
       TeamOutlined,
@@ -133,17 +132,16 @@ export const Layout: Story = {
       QqOutlined,
       MediumOutlined,
       AmazonOutlined,
-      SketchOutlined
+      SketchOutlined,
     },
     setup() {
-      return { args}
+      return { args };
     },
     template: `
     <AppLayout v-bind="args">
       <template #appListDrawer_control>
         <ControlOutlined />
       </template>
-
       <template #sider_ControlOutlined>
         <ControlOutlined />
       </template>
@@ -180,7 +178,6 @@ export const Layout: Story = {
       <template #sider_SketchOutlined>
         <SketchOutlined />
       </template>
-
       <template #userMenu_team>
         <TeamOutlined />
       </template>
@@ -189,9 +186,11 @@ export const Layout: Story = {
       </template>
 
       <template #content>
-        <div style="padding: 100px;height: 100vh">
-          <h1>Hello World</h1>
-          <p>Welcome to UI Libraby</p>
+        <div style="padding: 80px 30px; margin: 50px 30px;height: 100vh">
+          <div style="background: #d4d4d4;padding:50px 30px;border-radius: 10px">
+            <h1>Hello World</h1>
+            <p>Welcome to UI Libraby</p>
+            </div>
         </div>
       </template>
     </AppLayout>
@@ -221,5 +220,5 @@ export const Layout: Story = {
     bellCount: 5,
     bellDataStatus: 'ready',
     bellDataSource: AppHeaderData.args.bellDataSource,
-  }
-}
+  },
+};

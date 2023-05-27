@@ -1,17 +1,5 @@
 <template>
   <div class="-layout" data-e2e="layout">
-    <AppListDrawer
-      v-show="!hideUI"
-      :ver="ver"
-      :app-list-drawer-data="appListDrawerData"
-      :select-app-list-drawer-key="selectAppListDrawerKey"
-      :app-list-drawer-show="appListDrawerShow"
-      @clickAppListDrawerMenu="clickAppListDrawerMenu"
-    >
-      <template v-for="item in appListDrawerData" #[`appListDrawer_`+item.icon]>
-        <slot :name="`appListDrawer_` + item.icon" />
-      </template>
-    </AppListDrawer>
     <Layout :style="fixLayoutStyle">
       <LayoutHeader
         v-show="!hideUI"
@@ -33,7 +21,6 @@
           :logo-link="logoLink"
           :user-menu="userMenu"
           :user-info="userInfo"
-          @clickTopLeftCorner="clickTopLeftCorner"
           @logOut="$emit('logOut')"
           @clickBell="clickBell"
         >
@@ -124,7 +111,6 @@ import { Layout } from 'ant-design-vue';
 import Header from './Header.vue';
 import Sider from './Sider.vue';
 import ConsoleSider from './ConsoleSider.vue';
-import AppListDrawer from './ApplistDrawer.vue';
 import { SiderData, HeaderUserMenu, BellCardDataType } from '../interface';
 import { Key } from 'ant-design-vue/lib/_util/type';
 
@@ -138,7 +124,6 @@ export default defineComponent({
     Header,
     Sider,
     ConsoleSider,
-    AppListDrawer,
     MenuUnfoldOutlined,
     MenuFoldOutlined,
   },
@@ -163,19 +148,6 @@ export default defineComponent({
     isConsole: {
       type: Boolean,
       default: false,
-    },
-    // app list drawer
-    appListDrawerData: {
-      type: Array as PropType<SiderData[]>,
-      required: true,
-    },
-    selectAppListDrawerKey: {
-      type: Array as PropType<Key[]>,
-      default: () => [],
-    },
-    ver: {
-      type: String,
-      default: '1.0.0',
     },
     // header
     logoLink: {
@@ -212,21 +184,11 @@ export default defineComponent({
       default: 'ready',
     },
   },
-  emits: ['clickAppListDrawerMenu', 'clickMenu', 'onBreakpoint', 'logOut', 'clickBell'],
+  emits: ['clickMenu', 'onBreakpoint', 'logOut', 'clickBell'],
   setup(props, { emit }) {
     const isSiderCollapse = ref<boolean>(props.isConsole === true);
-    const appListDrawerShow = ref<boolean>(false);
     const selectedInnerKeys = ref(props.selectedKeys);
 
-    function clickAppListDrawerMenu($event: Event) {
-      emit('clickAppListDrawerMenu', $event);
-    }
-    function clickTopLeftCorner(boo: boolean) {
-      if (props.isConsole) {
-        appListDrawerShow.value = false;
-        isSiderCollapse.value = !boo;
-      } else appListDrawerShow.value = !boo;
-    }
     function clickMenu({ key }: { key: string }) {
       emit('clickMenu', key);
     }
@@ -257,13 +219,10 @@ export default defineComponent({
 
     return {
       isSiderCollapse,
-      appListDrawerShow,
       selectedInnerKeys,
       collapseStyle,
       layoutSiderBg,
       handlerSider,
-      clickAppListDrawerMenu,
-      clickTopLeftCorner,
       clickMenu,
       siderCollapse,
       clickBell,
@@ -293,7 +252,7 @@ export default defineComponent({
   }
 }
 .ant-layout-sider-trigger {
-  background: #3B79DB;
+  background: $primary-color;
   box-sizing: border-box;
   display: inline-block;
   text-align: center;

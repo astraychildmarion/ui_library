@@ -5,6 +5,7 @@ const meta = {
   title: 'UI/SearchBar',
   component: Search,
   tags: ['autodocs'],
+  decorators: [() => ({ template: '<div style="margin: 2em"><story /></div>'})],
   argTypes: {
     onSearchBarEnter: {
       action: 'searchBarEnter',
