@@ -79,6 +79,9 @@ declare const meta: {
         apiError: boolean | undefined;
     }>;
     tags: string[];
+    decorators: (() => {
+        template: string;
+    })[];
     argTypes: {
         text: {
             type: "string";

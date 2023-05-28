@@ -63,6 +63,9 @@ declare const meta: {
         minWidth: number;
     }>;
     tags: string[];
+    decorators: (() => {
+        template: string;
+    })[];
     argTypes: {
         onSearchBarEnter: {
             action: string;

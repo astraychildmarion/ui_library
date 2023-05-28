@@ -22,18 +22,6 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
         type: BooleanConstructor;
         default: boolean;
     };
-    appListDrawerData: {
-        type: PropType<SiderData[]>;
-        required: true;
-    };
-    selectAppListDrawerKey: {
-        type: PropType<Key[]>;
-        default: () => never[];
-    };
-    ver: {
-        type: StringConstructor;
-        default: string;
-    };
     logoLink: {
         type: StringConstructor;
         default: string;
@@ -69,15 +57,12 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
     };
 }, {
     isSiderCollapse: import('./vue/dist/vue.esm-bundler.js').Ref<boolean>;
-    appListDrawerShow: import('./vue/dist/vue.esm-bundler.js').Ref<boolean>;
     selectedInnerKeys: import('./vue/dist/vue.esm-bundler.js').Ref<Key[]>;
     collapseStyle: import('./vue/dist/vue.esm-bundler.js').ComputedRef<{
         width: string;
     }>;
-    layoutSiderBg: import('./vue/dist/vue.esm-bundler.js').ComputedRef<"#ffffff" | "#f0f0f0">;
+    layoutSiderBg: import('./vue/dist/vue.esm-bundler.js').ComputedRef<"#f0f0f0" | "#ffffff">;
     handlerSider: () => void;
-    clickAppListDrawerMenu: ($event: Event) => void;
-    clickTopLeftCorner: (boo: boolean) => void;
     clickMenu: ({ key }: {
         key: string;
     }) => void;
@@ -90,7 +75,7 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
         margin: string;
         maxWidth: string;
     };
-}, {}, {}, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, ("clickMenu" | "clickAppListDrawerMenu" | "logOut" | "clickBell" | "onBreakpoint")[], "clickMenu" | "clickAppListDrawerMenu" | "logOut" | "clickBell" | "onBreakpoint", import('./vue/dist/vue.esm-bundler.js').VNodeProps & import('./vue/dist/vue.esm-bundler.js').AllowedComponentProps & import('./vue/dist/vue.esm-bundler.js').ComponentCustomProps, Readonly<import('./vue/dist/vue.esm-bundler.js').ExtractPropTypes<{
+}, {}, {}, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, ("clickMenu" | "logOut" | "clickBell" | "onBreakpoint")[], "clickMenu" | "logOut" | "clickBell" | "onBreakpoint", import('./vue/dist/vue.esm-bundler.js').VNodeProps & import('./vue/dist/vue.esm-bundler.js').AllowedComponentProps & import('./vue/dist/vue.esm-bundler.js').ComponentCustomProps, Readonly<import('./vue/dist/vue.esm-bundler.js').ExtractPropTypes<{
     hideUI: {
         type: BooleanConstructor;
         default: boolean;
@@ -110,18 +95,6 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
     isConsole: {
         type: BooleanConstructor;
         default: boolean;
-    };
-    appListDrawerData: {
-        type: PropType<SiderData[]>;
-        required: true;
-    };
-    selectAppListDrawerKey: {
-        type: PropType<Key[]>;
-        default: () => never[];
-    };
-    ver: {
-        type: StringConstructor;
-        default: string;
     };
     logoLink: {
         type: StringConstructor;
@@ -157,15 +130,12 @@ declare const _sfc_main: import('./vue/dist/vue.esm-bundler.js').DefineComponent
         default: string;
     };
 }>> & {
-    onClickAppListDrawerMenu?: ((...args: any[]) => any) | undefined;
     onLogOut?: ((...args: any[]) => any) | undefined;
     onClickBell?: ((...args: any[]) => any) | undefined;
     onClickMenu?: ((...args: any[]) => any) | undefined;
     onOnBreakpoint?: ((...args: any[]) => any) | undefined;
 }, {
     selectedKeys: Key[];
-    selectAppListDrawerKey: Key[];
-    ver: string;
     logoLink: string;
     manageMenu: HeaderUserMenu[];
     userMenu: HeaderUserMenu[];

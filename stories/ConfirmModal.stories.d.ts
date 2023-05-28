@@ -70,6 +70,9 @@ declare const meta: {
         content: string;
     }>;
     tags: string[];
+    decorators: (() => {
+        template: string;
+    })[];
     argTypes: {
         confirmType: {
             options: string[];
